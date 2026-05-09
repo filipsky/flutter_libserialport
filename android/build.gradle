@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.sigrok.flutter_libserialport'
-version '1.0-SNAPSHOT'
+version '0.5.0-SNAPSHOT'
 
 allprojects {
     repositories {
@@ -14,15 +14,15 @@ allprojects {
 }
 
 android {
-    namespace "org.sigrok.flutter_libserialport"  // Required property
-    compileSdkVersion 34  // Updated to the latest stable SDK version
+    namespace "org.sigrok.flutter_libserialport"
+    compileSdkVersion 34
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
     defaultConfig {
-        minSdkVersion 21  // Updated to a more modern minimum SDK version
+        minSdkVersion 21
     }
 
     lintOptions {
@@ -36,17 +36,17 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
-    buildToolsVersion '34.0.0'  // Use the latest build tools
+    buildToolsVersion '34.0.0'
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.10"  // Match the latest Kotlin version
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.10"
 }
